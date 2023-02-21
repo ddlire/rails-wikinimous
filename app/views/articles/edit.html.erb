@@ -1,0 +1,9 @@
+<h2>Edit your article</h2>
+
+<%= form_with model: @article do |f|%>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :content %>
+  <%= f.text_field :content, size: "35x10" %>
+  <%= f.submit "Update" %>
+<% end %>

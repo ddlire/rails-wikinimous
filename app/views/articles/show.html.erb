@@ -1,0 +1,10 @@
+<div class="justify-content-center">
+  <div class="d-flex p-3 m-3">
+    <h3><%= @article.title %></h3>
+    <%= link_to raw("<i class='fa-regular fa-trash-can'></i>"), article_path(@article.id), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+    <%= link_to raw("<i class='fa-regular fa-pen-to-square'></i>"), edit_article_path %>
+  </div>
+  <h6><%= @article.content %></h6>
+
+  <%= link_to "back to index", root_path, class: "btn btn-primary" %>
+</div>

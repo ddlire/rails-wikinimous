@@ -1,0 +1,9 @@
+<h2>Add a new article</h2>
+
+<%= form_with model: @article do |f|%>
+  <%= f.label :title %>
+  <%= f.text_field :title, value: @article.title %>
+  <%= f.label :content %>
+  <%= f.text_field :content, size: "35x10", value: @article.content %>
+  <%= f.submit "New article" %>
+<% end %>
